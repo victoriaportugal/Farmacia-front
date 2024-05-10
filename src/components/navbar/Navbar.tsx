@@ -1,4 +1,4 @@
-import React from 'react'
+import { Link } from "react-router-dom"
 
 
 function Navbar() {
@@ -13,8 +13,9 @@ function Navbar() {
            
 
             <div className='flex gap-4'>
-              <div className='hover:underline'>Produtos</div>
-              <div className='hover:underline'>Categorias</div>
+            <Link to='/produto' className='hover:underline'>Produtos</Link>
+            <Link to='/categoria' className='hover:underline'>Categorias</Link>
+            <Link to='/cadastroCategoria' className='hover:underline'>Cadastrar Categorias</Link>
             </div>
           </div>
         </div>
