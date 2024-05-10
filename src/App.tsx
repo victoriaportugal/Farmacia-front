@@ -1,7 +1,30 @@
-export default function App() {
+
+import './App.css';
+import Home from './components/pages/home/Home';
+import Navbar from './components/navbar/Navbar';
+import Footer from './components/footer/Footer';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
+
+function App() {
+
+  
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-  )
+    <>
+        <BrowserRouter>
+          <Navbar />
+          <div className='min-h-[80vh]'>
+            <Routes>
+
+              <Route path="/" element={<Home />} />
+              <Route path="/home" element={<Home />} />
+
+            </Routes>
+          </div>
+          
+          <Footer />
+        </BrowserRouter>
+    </>
+  );
 }
+export default App;
