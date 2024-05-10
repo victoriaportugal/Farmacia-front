@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
-import Home from "./components/pages/home/Home"
+import Home from "./pages/home/Home"
 import Navbar from "./components/navbar/Navbar"
 import Footer from "./components/footer/Footer"
 import ListaCategoria from "./components/categorias//listarCategorias/ListarCategorias"
@@ -16,7 +16,7 @@ function App() {
         <Routes>
           <Route path="/home" element={<Home />} />
           <Route path="/categoria" element={<ListaCategoria />} />
-          <Route path="/cadastroCategoria" element={<FormularioCategoria />} />
+          <Route path="/formularioCategoria" element={<FormularioCategoria />} />
           <Route
             path="/editarCategoria/:id"
             element={<FormularioCategoria />}
